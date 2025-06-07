@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server"
-import { collection, getDocs, query, where } from "firebase/firestore"
 
-import { db } from "@/lib/firebase"
+// ❌ Remove top-level Firebase imports
+// import { collection, getDocs, query, where } from "firebase/firestore"
+// import { db } from "@/lib/firebase"
 
 // In a production environment, this would use Nodemailer
 // For now, we'll simulate sending email notifications
@@ -9,6 +10,10 @@ import { db } from "@/lib/firebase"
 export async function POST(request: Request) {
   try {
     const { subject, text, deviceId, level } = await request.json()
+
+    // ✅ Use dynamic imports inside the function
+    const { collection, getDocs, query, where } = await import("firebase/firestore")
+    const { db } = await import("@/lib/firebase")
 
     // In a real application, you would:
     // 1. Get the list of users who should receive this notification
@@ -37,4 +42,12 @@ export async function POST(request: Request) {
     console.error("Error sending email notification:", error)
     return NextResponse.json({ error: "Failed to send email notification" }, { status: 500 })
   }
+}
+
+// Add a GET handler for testing the API endpoint
+export async function GET() {
+  return NextResponse.json({ 
+    status: "Email notification API is operational",
+    message: "Use POST method to send notifications" 
+  })
 }
