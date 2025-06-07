@@ -241,7 +241,7 @@ export default function FaultDiagnosisPage() {
   useEffect(() => {
     if (selectedDeviceId && diagnosisMode === "device") {
       // Reference to the device data in Realtime Database
-      const deviceRef = ref(realtimeDb, `HMI_Sensor_Data/${selectedDeviceId}`)
+      const deviceRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${selectedDeviceId}`)
 
       const unsubscribe = onValue(
         deviceRef,
@@ -359,7 +359,7 @@ export default function FaultDiagnosisPage() {
   // Fetch device data when selected device changes
   useEffect(() => {
     if (selectedDeviceId && diagnosisMode === 'device') {
-      const deviceRef = ref(realtimeDb, `HMI_Sensor_Data/${selectedDeviceId}`)
+      const deviceRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${selectedDeviceId}`)
       
       const unsubscribe = onValue(deviceRef, (snapshot) => {
         if (snapshot.exists()) {

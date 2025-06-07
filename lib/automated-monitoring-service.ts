@@ -33,7 +33,7 @@ export function startAutomatedMonitoring(deviceId: string, userId: string): void
   activeMonitoringSessions[deviceId] = true
 
   // Reference to the device data in Realtime Database
-  const deviceRef = ref(realtimeDb, `HMI_Sensor_Data/${deviceId}`)
+  const deviceRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${deviceId}`)
 
   // Set up real-time listener
   onValue(
@@ -103,7 +103,7 @@ export function stopAutomatedMonitoring(deviceId: string): void {
   console.log(`Stopping automated monitoring for device ${deviceId}`)
 
   // Remove the listener
-  const deviceRef = ref(realtimeDb, `HMI_Sensor_Data/${deviceId}`)
+  const deviceRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${deviceId}`)
   off(deviceRef)
 
   // Update the tracking object

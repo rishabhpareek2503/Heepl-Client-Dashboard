@@ -15,7 +15,7 @@ export function initDataVerification() {
     })
   
     // Log the expected data path
-    console.log("Expected data path: HMI_Sensor_Data/RPi001/Live")
+    console.log("Expected data path: Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/RPi001/Live")
   
     // Log browser information
     console.log("Browser information:", {
@@ -26,7 +26,7 @@ export function initDataVerification() {
   
     // Log helpful debugging tips
     console.log("Debugging tips:")
-    console.log("1. Make sure your Firebase Realtime Database has data at path: HMI_Sensor_Data/RPi001/Live")
+    console.log("1. Make sure your Firebase Realtime Database has data at path: Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/RPi001/Live")
     console.log("2. The data should have fields: PH, BOD, COD, TSS, Flow, Temperature, DO, Conductivity, Turbidity")
     console.log("3. Check the Firebase console for any permission errors")
     console.log("4. Ensure your Firebase project has the Realtime Database enabled")

@@ -355,7 +355,7 @@ export default function DashboardPage() {
                     <AlertTitle>Default Test Device</AlertTitle>
                     <AlertDescription className="text-sm">
                       This device is always available for testing and will show live data from the
-                      HMI_Sensor_Data/RPi001/Live path.
+                      Clients/devices/RPi001/Live path.
                     </AlertDescription>
                   </Alert>
                 </div>

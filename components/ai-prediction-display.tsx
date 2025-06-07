@@ -75,8 +75,8 @@ export function AIPredictionDisplay({ deviceId = "RPi001", mode = "auto" }: AIPr
     if (mode !== "auto" || !deviceId) return
 
     // Reference to the device data in Realtime Database
-    const deviceRef = ref(realtimeDb, `HMI_Sensor_Data/${deviceId}/Live`)
-    console.log("Setting up AI prediction listener at path:", `HMI_Sensor_Data/${deviceId}/Live`)
+    const deviceRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${deviceId}/Live`)
+    console.log("Setting up AI prediction listener at path:", `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/${deviceId}/Live`)
 
     const unsubscribe = onValue(
       deviceRef,

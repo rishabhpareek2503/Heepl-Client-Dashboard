@@ -44,7 +44,7 @@ export default function HistoricalReadingPage() {
   useEffect(() => {
     async function fetchReading() {
       try {
-        const readingRef = ref(realtimeDb, `HMI_Sensor_Data/RPi001/History/${timestamp}`)
+        const readingRef = ref(realtimeDb, `Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/RPi001/History/${timestamp}`)
         const snapshot = await get(readingRef)
 
         if (snapshot.exists()) {

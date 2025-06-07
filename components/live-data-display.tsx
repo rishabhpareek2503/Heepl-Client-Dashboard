@@ -144,7 +144,7 @@ export function LiveDataDisplay({ deviceId, title = "Live Sensor Data" }: LiveDa
           <div className="p-4 text-center">
             <p className="text-red-600 dark:text-red-400">{error}</p>
             <p className="text-xs mt-4 text-gray-500">
-              Make sure data exists at path: <code>HMI_Sensor_Data/{deviceId}/Live</code>
+              Make sure data exists at path: <code>Clients/TyWRS0Zyusc3tbtcU0PcBPdXSjb2/devices/{deviceId}/Live</code>
             </p>
             <Button onClick={handleRefresh} className="mt-4">
               <RefreshCw className="mr-2 h-4 w-4" />
