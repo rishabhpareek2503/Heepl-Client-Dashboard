@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+
+
 // ❌ Remove top-level Firebase imports
 // import { collection, getDocs, query, where } from "firebase/firestore"
 // import { db } from "@/lib/firebase"
