@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
-import { collection, getDocs, query, where } from "firebase/firestore"
+// import { collection, getDocs, query, where } from "firebase/firestore"
 
-import { db } from "@/lib/firebase"
+// import { db } from "@/lib/firebase"
 
 // In a production environment, this would use Twilio
 // For now, we'll simulate sending WhatsApp notifications
